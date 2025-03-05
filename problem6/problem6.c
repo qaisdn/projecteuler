@@ -2,11 +2,26 @@
 #include <math.h>
 
 int main(){
-  int number = 1, sum = 0;
+  int number = 1, number2 = 1, sumOfSquares = 0, sum = 0, squareOfSum = 0, answer;
 
-  while(number <= 100){
-    sum = sum + pow(number,2);
+  while (number<=100) {
+    sumOfSquares += pow(number,2);
     number++;
   }
-  printf("%i\n", sum);
+  printf("Sum of the  squares: %d\n",sumOfSquares);
+
+  while (number2<101){
+    sum += number2;
+    number2++;
+  }
+  squareOfSum = sum * sum;
+
+  printf("Square of the sum: %d\n", squareOfSum);
+
+  answer = squareOfSum - sumOfSquares;
+
+
+  printf("The answer: %d\n",answer);
+  
+  return 0;
 }
